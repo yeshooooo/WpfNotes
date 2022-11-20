@@ -13,7 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace WpfNotes
+namespace WpfFramework
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
@@ -23,18 +23,6 @@ namespace WpfNotes
         public MainWindow()
         {
             InitializeComponent();
-            //new Label().Content= new Button();
-            
-        }
-
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            MessageBox.Show("Hello World");
-        }
-
-        private void TextBlock_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
-        {
-
         }
     }
 }

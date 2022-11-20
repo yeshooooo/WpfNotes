@@ -10,31 +10,24 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace WpfNotes
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for InputWindow2.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class InputWindow2 : Window
     {
-        public MainWindow()
+        public InputWindow2()
         {
             InitializeComponent();
-            //new Label().Content= new Button();
-            
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void Slider_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
         {
-            MessageBox.Show("Hello World");
-        }
-
-        private void TextBlock_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
-        {
-
+            // 不一定要在控件上写name，这个sender就是触发事件的控件
+            tb.Text = (sender as Slider).Value.ToString();
         }
     }
 }

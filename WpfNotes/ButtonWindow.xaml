@@ -1,0 +1,18 @@
+﻿<Window x:Class="WpfNotes.ButtonWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfNotes"
+        mc:Ignorable="d"
+        FontSize="20"
+        Title="ButtonWindow" Height="450" Width="800">
+    <StackPanel>
+        <!--如果希望操作按钮，则提供一个Name名称，不过wpf建议另一种方式-->
+        <TextBlock Text="" Name="tb"/>
+        <Button Content="Hello Zhaoxi" Click="Button_Click" Name="btn" />
+        <Button Content="Hello Zhaoxi" Click="Button_Click" Name="btn1" />
+        <!--RepeatButton 可以按住不松开有效-->
+        <RepeatButton Content="RepeatButton" Click="RepeatButton_Click"/>
+    </StackPanel>
+</Window>

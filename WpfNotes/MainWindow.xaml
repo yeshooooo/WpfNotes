@@ -4,9 +4,44 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfNotes"
-        mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
+        mc:Ignorable="d" 
+        
+        Foreground="Orange" FontSize="14"
+        Title="MainWindow" Height="450" Width="800" Focusable="False">
+    <Grid Background="Gray">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="2*"/>
+            <!--auto 默认是没有高度的，如果在里面放入内容的话，高度会根据内容自动调整-->
+            <RowDefinition Height="auto"/> 
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="100"/>
+            <!--默认就是* 意思就是剩下的空间等分之后的一份-->
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="auto"/>
+        </Grid.ColumnDefinitions>
+        <!--注释信息 -->
+        <TextBlock Text="Hello World" Background="#FF121E2B" FontWeight="ExtraBlack" Visibility="Visible"
+                   MouseLeftButtonDown="TextBlock_MouseLeftButtonDown"
+                   Margin="10" VerticalAlignment="Stretch" HorizontalAlignment="Left" 
+                   Grid.Row="3"/>
+        <Label Foreground="#FFBA2E2E" FontSize="40" Background="#FF121E2B" FontWeight="ExtraBlack" Visibility="Visible"
+                   MouseLeftButtonDown="TextBlock_MouseLeftButtonDown"
+                   Margin="10" VerticalAlignment="Stretch"
+               Grid.Row="2" Grid.Column="2">
+            <Label.Content>
+                <!--等同于c#里的new Label().Content= new Button();-->
+                <Button Content="Button"/>
+            </Label.Content>
+        </Label>
+        <Button Click="Button_Click" Content="Button"></Button>
+        <Grid Grid.Column="1" Background="LightBlue"/>
+
+
+
 
     </Grid>
 </Window>

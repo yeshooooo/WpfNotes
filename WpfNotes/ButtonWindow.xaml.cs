@@ -10,31 +10,35 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace WpfNotes
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for ButtonWindow.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class ButtonWindow : Window
     {
-        public MainWindow()
+        public ButtonWindow()
         {
             InitializeComponent();
-            //new Label().Content= new Button();
+        }
+        int value = 0;
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            // 点击后切换按钮文字
+            // this.btn 就可以拿到Name标记的对象
+            //this.btn.Content = "Hello Jovan";
+            value++;
+            this.tb.Text = value.ToString();
             
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void RepeatButton_Click(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("Hello World");
-        }
-
-        private void TextBlock_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
-        {
-
+            // 点击之后改变textblock
+            value++;
+            this.tb.Text = value.ToString();
         }
     }
 }

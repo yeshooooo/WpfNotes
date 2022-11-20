@@ -10,31 +10,26 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace WpfNotes
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for Example1Window.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class Example1Window : Window
     {
-        public MainWindow()
+        public Example1Window()
         {
             InitializeComponent();
-            //new Label().Content= new Button();
-            
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("Hello World");
-        }
-
-        private void TextBlock_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
-        {
-
+            // 
+            int value1 = int.Parse(this.tb1.Text);
+            int value2 = int.Parse(this.tb2.Text);
+            this.tb3.Text = (value1 + value2).ToString();
         }
     }
 }

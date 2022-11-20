@@ -7,4 +7,12 @@
     <UseWPF>true</UseWPF>
   </PropertyGroup>
 
+  <ItemGroup>
+    <None Remove="Images\lufei.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Images\lufei.png" />
+  </ItemGroup>
+
 </Project>
